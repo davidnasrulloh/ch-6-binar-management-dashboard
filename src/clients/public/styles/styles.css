@@ -1,0 +1,154 @@
+:root {
+    --header-height: 60px;
+    --nav-width: 250px;
+    --first-color: #0d28a6;
+    --white-color: #ffffff;
+    --hover-color: #cfd4ed;
+    --z-fixed: 100;
+}
+
+body{
+    background-color: #F4F5F7;
+}
+
+a {
+    text-decoration: none;
+}
+
+#sidebar1 {
+    background-color: #0D28A6;
+    z-index: 10;
+}
+
+#sidebar1 p {
+    font-size: .75em;
+}
+
+#sidebar1 div div.selected{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar2 {
+    min-width: 220px;
+    z-index: -1;
+    margin-left: 4.5em;
+}
+.sidebar2 p{
+    font-size: 0.9em;
+    font-weight: 700;
+    padding: .75em 1.5em;
+    margin: 0;
+}
+
+.sidebar2 div div.selected{
+    background-color: #cfd4ed;
+}
+
+#navbar {
+    z-index: 1;
+}
+
+#navbar img {
+    margin-right: 7.6rem;
+}
+
+.main {
+    z-index: 0;
+}
+
+.breadcrumb {
+    font-size: .75em;
+    font-weight: 700;
+}
+
+#main-content h3 {
+    font-size: 1.25em;
+    z-index: -100;
+}
+
+.btn-add {
+    background-color: #0D28A6;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9em;
+    color: white;
+}
+
+.btn-size-selected {
+    background: #CFD4ED;
+    border: 1px solid #0D28A6;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: #0D28A6;
+    padding: 0.5em 0.75em;
+}
+
+.btn-size {
+    background: white;
+    border: 1px solid #AEB7E1;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: #AEB7E1;
+    padding: 0.5em 0.75em;
+}
+
+.card p {
+    font-size: .9em;
+}
+
+.card .text-price {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.btn-delete {
+    background: white;
+    border: 1px solid #FA2C5A;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: #FA2C5A;
+    padding: 0.5em 0.75em;
+    height: 3rem;
+    width: 7rem;
+}
+
+.btn-edit {
+    background: #5CB85F;
+    border: 0;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: white;
+    padding: 0.5em 0.75em;
+    height: 3rem;
+    width: 7rem;
+}
+
+.btn-cancel {
+    background: white;
+    border: 1px solid #0D28A6;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: #0D28A6;
+    padding: 0.5em 0.75em;
+    width: 87px;
+    height: 36px;
+}
+
+.btn-save {
+    background: #0d28a6;
+    border: 0;
+    border-radius: 2px;
+    font-size: .9em;
+    font-weight: 700;
+    color: #fff;
+    padding: 0.5em 0.75em;
+    width: 87px;
+    height: 36px;
+}
+
+

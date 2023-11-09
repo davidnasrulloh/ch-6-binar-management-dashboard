@@ -1,0 +1,80 @@
+<%- include('layouts/header') %> 
+<%- include('layouts/nav') %> 
+
+    <script>console.log(cars)</script>
+
+    <!--Main Content-->
+    <section id="main-content">
+        <div class="container-fluid p-4" style="margin-top: 4rem;">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item">Cars</li>
+                <li class="breadcrumb-item active" aria-current="page"><a href="/">
+                    List Car
+                </a></li>
+                </ol>
+            </nav>
+            <div class="d-flex">
+                <h3>List Car</h3>
+                <a href="/add-car" class=" ms-auto">
+                    <button class="btn-add border-0">
+                        <i class="bi bi-plus"></i>Add New Car
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid px-4">
+            <button class="btn-size-selected">All</button>
+            <button disabled class="btn-size">Small</button>
+            <button disabled class="btn-size">Medium</button>
+            <button disabled class="btn-size">Large</button>
+            <!-- <a href="/cars-size?size=small" class="btn-size mx-1" aria-disabled="true">Medium</a>
+            <a href="/cars-size?size=small" class="btn-size mx-1" aria-disabled="true">Medium</a>
+            <a href="/cars-size?size=small" class="btn-size" aria-disabled="true">Large</a> -->
+        </div>
+        <div class="container-fluid p-4">   
+            <div class="row">
+                <% cars.forEach(element => { %>
+                    <div class="col-lg-4 col-md-6 mt-2 d-flex align-item-stretch">
+                        <div class="card">
+                            <div class="card-body d-flex flex-column mx-auto mx-auto">
+                                <img src="<%= element.image %> " alt="" class="py-4 img-fluid mb-auto">
+                                <p class="fw-bold"><%= element.name %> </p>
+                                <p class="size-car">Size : <%= element.size %></p>
+                                <p id="updated<%= element.id %>"><%= element.updatedAt %> </p>
+                                <div class="d-flex justify-content-around mt-auto">
+                                    <button class="btn-delete" data-bs-toggle="modal" data-bs-target="#exampleModal<%= element.car_id %>"><i class="bi bi-trash"></i> Delete</button>
+                                    <a href="/edit-car/<%= element.car_id %>">
+                                        <button class="btn-edit"><i class="bi bi-pencil-square"></i> Edit</button>
+                                    </a>
+                                </div>
+                                <div class="modal fade" id="exampleModal<%= element.car_id %>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="container text-center bg-white d-flex flex-column align-items-center justify-content-center" style="width: 387px;
+                                            height: 333px;">
+                                              <img src="img/img-BeepBeep.png" alt="">
+                                              <p>Menghapus Data Mobil</p>
+                                              <p>Setelah dihapus, data mobil tidak dapat dikembalikan. Yakin ingin menghapus?</p>
+                                              <div class="d-flex">
+                                                <a href="/delete-car/<%= element.car_id %>">
+                                                    <button type="submit" class="btn-save me-3" >Ya</button>
+                                                </a>
+                                                  <button type="cancel" class="btn-cancel" data-bs-dismiss="modal">Tidak</button>
+                                              </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <% }) %>
+            </div>
+        </div>
+    </section>
+    
+
+<%- include('layouts/footer') %> 
+    

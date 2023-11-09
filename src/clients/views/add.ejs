@@ -1,0 +1,64 @@
+<%- include('layouts/header') %> 
+<%- include('layouts/nav') %> 
+
+    <div class="container-fluid p-4" style="margin-top: 4rem;">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item">Cars</li>
+            <li class="breadcrumb-item"><a href="/">
+                List Car
+            </a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="/add-car">
+                Add New Car
+            </a></li>
+            </ol>
+        </nav>
+        <div class="d-flex">
+            <h3>Add New Car</h3>
+        </div>
+    </div>
+    <div class="container-fluid px-4">
+        <form action="/add-car" method="post" enctype="multipart/form-data">
+            <div class="d-flex flex-column justify-content-between" style="height: 70vh;">
+                <div class="bg-white p-4">
+                    <div class="row mb-3">
+                        <label for="nama" class="col-sm-2 col-form-label">Nama</label>
+                        <div class="col-sm-4">
+                        <input type="text" class="form-control rounded-0" name="name" id="name">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="sewa" class="col-sm-2 col-form-label">Sewa Per Hari</label>
+                        <div class="col-sm-4">
+                        <input type="number" class="form-control rounded-0" id="rent_per_day" name="price">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="ukuran" class="col-sm-2 col-form-label">Ukuran*</label>
+                        <div class="col-sm-4">
+                            <select class="form-select" aria-label="Default select example" name="size">
+                                <option selected hidden>Ukuran</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="foto" class="col-sm-2 col-form-label">Foto*</label>
+                        <div class="col-sm-4">
+                            <input type="file" class="form-control rounded-0" id="image" name="image">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="/" class="btn-cancel me-3">Cancel</a>
+                    <button type="submit" class="btn-save">Save</button>
+                </div>
+            </div>
+            </form>
+    </div>
+
+<%- include('layouts/footer') %> 
+
+

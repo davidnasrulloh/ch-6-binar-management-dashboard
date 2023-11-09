@@ -16,7 +16,7 @@ app.get("/cars", handleGetListCars);
 app.get("/cars/:id", handleGetCar);
 app.put("/cars/:id", handleUpdateCar);
 app.delete("/cars/:id", handleDeleteCar);
-app.get("/cars-by-size", handleGetListCarBySize);
+app.get("/cars-size/:size", handleGetListCarBySize);
 
 app.listen(PORT, () => {
     console.log(`app running in http://localhost:${PORT}`);
