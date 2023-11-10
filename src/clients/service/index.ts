@@ -48,7 +48,9 @@ export async function insertCarApi(req: Request, res: Response) {
 
     try {
       const result = await cloudinary.uploader.upload(file);
-    
+
+      console.log(result)
+
       const body = req.body as CarRequestBody;
       body.image = result.url;
       
