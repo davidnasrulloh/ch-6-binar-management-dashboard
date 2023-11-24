@@ -48,7 +48,7 @@ export async function handleGetListCars(req: Request, res: Response): Promise<vo
 export async function handleGetCar(req: Request, res: Response): Promise<void> {
     const car_id = parseInt(req.params.id, 10);
     try {
-        const data = await database.select('*').from('cars').where('car_id', '=', car_id).first();
+        const data = await database.select('*').from('cars').where('id', '=', car_id).first();
         if (data) {
             res.status(200).json({
             data,

@@ -5,7 +5,7 @@ const database = knex({
   connection: {
     host: '127.0.0.1',
     user: 'postgres',
-    password: 'docker',
+    password: 'david',
     database: 'postgres',
   },
   searchPath: ['binarcar'], // schema

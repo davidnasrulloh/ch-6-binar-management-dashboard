@@ -107,6 +107,7 @@
     "skipLibCheck": true,
     "paths": {
       "@/*": ["./src/*"]
-    }                                   /* Skip type checking all .d.ts files. */
+    },
+    "types": ["node", "express", "swagger-ui-express"]                            /* Skip type checking all .d.ts files. */
   }
 }

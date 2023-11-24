@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Frontend routes
 app.get("/", getListCarsApi);
 app.get("/cars-size", getListCarsBySizeApi);
-app.get("/add-car", handleAddCar); // Change to GET since you're rendering a view
+app.get("/add-car", handleAddCar);
 app.post("/add-car", upload.single("image"), insertCarApi);
 app.get("/edit-car/:id", handleToEditCar);
 app.post("/update-car/:id", upload.single("image"), updateCarApi);
